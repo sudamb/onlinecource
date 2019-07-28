@@ -1,0 +1,60 @@
+<div class="online-course-container">
+    <nav class="nav-bar" id="angularJS-navbar">
+        <ul class="pull-right">
+            <li class="active">
+                <a href="">Home</a>
+            </li>
+            <li ng-click="redirectToLink('FAQ')">
+                <a href="">FAQ</a>
+            </li>
+            <li>
+                <a href="">Logout</a>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </nav>
+
+    <div class="courses-concept-list">
+        <div class="left-nav">
+            <ul>
+                <li ng-class="{'active-tab':true}">
+                    <a href="">
+                        <span>Routing</span>
+                        <i class="pull-right fa fa-angle-right floater-right fa-icons-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>AngularJS Library</span>
+                        <i class="pull-right fa fa-angle-right floater-right fa-icons-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Directives</span>
+                        <i class="pull-right fa fa-angle-right floater-right fa-icons-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Data Binding</span>
+                        <i class="pull-right fa fa-angle-right floater-right fa-icons-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="repective-navbar-link">
+            <div class="text">
+                An AngularJS module defines an application.The module is a container for the different parts of an application.
+                The module is a container for the application controllers.Controllers always belong to a module.An AngularJS module defines an application.The module is a container for the different parts of an application.
+                The module is a container for the application controllers.Controllers always belong to a module.An AngularJS module defines an application.The module is a container for the different parts of an application.
+                The module is a container for the application controllers.Controllers always belong to a module.
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $('#angularJS-navbar').scrollToFixed();
+</script>

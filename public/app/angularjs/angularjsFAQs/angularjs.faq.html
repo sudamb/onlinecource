@@ -1,0 +1,107 @@
+<div class="online-course-container">
+    <nav class="nav-bar" id="angularJS-navbar">
+        <ul class="pull-right">
+            <li class="active">
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">FAQ</a>
+            </li>
+            <li>
+                <a href="">Logout</a>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </nav>
+
+    <div class="faq-list">
+        <button class="pull-right ask-question" ng-click="toggleQuestionPopup(true)">
+            Ask Question
+            <i class="fa fa-question" aria-hidden="true"></i>
+        </button>
+        <div class="clear"></div>
+        <ul>
+            <li>
+                <div class="faq-outer-div">
+                    <div class="faq-inner-div">
+                        <div class="question-answer">
+                            <div class="question">
+                                What is AngularJS ?
+                            </div>
+                            <div class="answer-by">
+                                <span class="answer-by-text">Answer By: </span>
+                                <span>Sudam Burkule</span>
+                            </div>
+                            <div class="answer">
+                                AngularJS is a structural framework for dynamic web apps.
+                                It lets you use HTML as your template language and lets you extend
+                                HTML's syntax to express your application's components clearly and succinctly.
+                                Angular's data binding and dependency injection eliminate much of the code you
+                                would otherwise have to write.
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <a>
+                                <i class="fa fa-comment" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="faq-outer-div">
+                    <div class="faq-inner-div">
+                        <div class="question-answer">
+                            <p class="question">
+                                What is AngularJS ?
+                            </p>
+                            <div class="answer-by">
+                                <span class="answer-by-text">Answer By: </span>
+                                <span>Gagan</span>
+                            </div>
+                            <p class="answer">
+                                AngularJS is a structural framework for dynamic web apps.
+                                It lets you use HTML as your template language and lets you extend
+                                HTML's syntax to express your application's components clearly and succinctly.
+                                Angular's data binding and dependency injection eliminate much of the code you
+                                would otherwise have to write.
+                            </p>
+                        </div>
+                        <div class="comment">
+                            <a>
+                                <i class="fa fa-comment" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!---------------Question Dialog-------------------->
+
+<div class="modal fade" role="dialog" id="questionId">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="" class="close-icon pull-right" data-dismiss="modal">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="modal-body">
+                <form class="register-form" name="questionForm">
+                    <div class="form-group">
+                        <input class="form-control" type="email" id="email" name="email" ng-model="newQuestion.questionAskedBy" placeholder="Email" autocomplete="off" required/>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="4" cols="4" ng-model="newQuestion.question" placeholder="Question" required></textarea>
+                    </div>
+                    <button class="btn-control" type="submit" ng-click="postQuestion(questionForm)">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

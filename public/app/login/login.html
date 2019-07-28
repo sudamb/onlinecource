@@ -1,0 +1,95 @@
+<div class="main-head">
+    <div class="container">
+        <div class="login row">
+            <form class="form" name="loginform">
+                <div class="alert alert-danger" ng-show="alertMsg.errorMsg">{{errorMsg}}</div>
+                <div class="alert alert-success" ng-class="{'hide-message':!alertMsg.successMsg,'show-message':alertMsg.successMsg}">{{successMsg}}</div>
+                <div class="form-group">
+                    <input class="login-text form-control" type="email" id="email" name="email" ng-model="loginUser.username" placeholder="Username" autocomplete="off" required/>
+                </div>
+
+                <div class="form-group">
+                    <input class="login-text form-control" id="password" type="password" name="password" ng-model="loginUser.password" placeholder="Password" autocomplete="off" required/>
+                </div>
+                <button class="btn-control" type="submit" ng-click="login(loginform)">Login</button>
+            </form>
+            <div class="social_accoount">
+                <button class="btn omb_btn-facebook" ng-click="fbLogin()">
+                    <span class="hidden-xs">Login with Facebook</span>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </button>
+                <button class="btn omb_btn-gmail" ng-click="googleLogin()">
+                     <span class="hidden-xs">Login with Google+</span>
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </button>
+                <div class="clears"></div>
+            </div>
+            <div class="signup-forgot">
+                <a href="" ng-click="toggleSignupDialog(true)">SignUp</a>
+                <a href="" class="pull-right" ng-click="toggleForgotPasswordDialog(true)">Forgot Password</a>
+                <div class="clears"></div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<div class="modal fade" role="dialog" id="signup">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="" class="close-icon pull-right" data-dismiss="modal">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="modal-body">
+                <form class="register-form" name="registerform">
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="name" name="name" placeholder="Name" ng-model="newUser.name" autocomplete="off" required/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="email" id="email" name="email" placeholder="Username" ng-model="newUser.username" autocomplete="off" required/>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="number" id="phone-number" name="phonenumber" placeholder="Mobile Number" ng-model="newUser.phoneNumber" autocomplete="off" required/>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input class="form-control" type="password" id="password" name="password" placeholder="Paasword" ng-model="newUser.password" autocomplete="off" required/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Paasword" autocomplete="off" required/>
+                    </div>
+
+                    <button class="btn-control" type="submit" ng-click="register(registerform)">Sign Up</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" role="dialog" id="forgotPassword">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="" class="close-icon pull-right" data-dismiss="modal">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="modal-body">
+                <form class="register-form" name="forgotPasswordform">
+                    <div class="form-group">
+                        <input class="form-control" type="email" id="email" name="email" placeholder="Username" ng-model="resetPassword.username" autocomplete="off" required/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" id="password" name="password" placeholder="New Password" ng-model="resetPassword.password" autocomplete="off" required/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" id="confirm_password" name="confirm_password" ng-model="resetPassword.confirmPassword" placeholder="Confirm Password" autocomplete="off" required/>
+                    </div>
+                    <button class="btn-control" type="submit" ng-click="forgotPassword(forgotPasswordform)">Submit</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+</div>
